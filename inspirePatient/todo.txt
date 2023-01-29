@@ -1,0 +1,13 @@
+1) Navigation interaction.
+    a) inbox bubble and logo
+2) Welcome area use patient object for Welcome XXXXX
+3) Charts for data representation
+    a) data to represent
+4) Daily pain report.
+    a) submit clears input and sends data to append into patient object
+    b) Text area for notes.
+    c) Display of daily added after created
+        i) Shows Date/Time/MaxPain/Notes.
+5) Mobile friendly/Repsonsiveness
+6) CSS
+

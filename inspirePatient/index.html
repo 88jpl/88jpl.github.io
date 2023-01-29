@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=SofiaSans">
+    <title>Patient Dashboard</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Title Area -->
+        <div id="title-area">
+            <!-- Logo area -->
+            <span id="clinic-logo"></span>
+            <span id="clinic-name">This is the clinic name</span>
+            <!-- Profile -->
+            <div id="account-area">
+                <span id="patient-name"></span>
+                <span id="patient-picture"></span>
+            </div>
+        </div>
+        <!-- Navigation bar -->
+        <div id="navigation">
+            <div class="nav-item" id="nav-home">Home</div>
+            <div class="nav-item">Track Progress</div>
+            <div class="nav-item">Workouts</div>
+            <div class="nav-item">Inbox</div> 
+        </div>
+        <!-- Welcome Area -->
+        <div id="welcome-area">
+            <h2 id="welcome-patient">Welcome Jeff,</h2>
+            <div id="welcome-quote-area">
+                <h3 id="quote-header">Motivational Quote: </h3>
+                <p id="quote-of-the-day"></p>
+                <p id="quote-of-the-day-dash">—<em id="quote-of-the-day-author">Author Name</em></p>
+            </div>
+        </div> 
+        <!-- Data -->
+        <div id="data">
+            <div id="data-left">
+                <div id="data-left-small"></div>
+                <div id="streak-container">
+                <div id="streak-header">Current<br>Streak:</div>
+                    <h1 id="streak-days">8</h1>
+                    <h3 id="streak-footer">Days!</h3>
+                </div>
+            </div>
+            <div id="data-right"></div>
+        </div>
+        <!-- Videos -->
+        <div id="videos">
+            <div id="recent">
+                <h3>Recent</h3>
+                <div id="recent-vids">
+                    <iframe id="recent1" width="40%" height="80" src="https://www.youtube.com/embed/XXc3A4icRZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="recent2" width="40%" height="80" src="https://www.youtube.com/embed/XXc3A4icRZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="suggested">
+                <h3>Recommended</h3>
+                <div id="suggested-vids">
+                    <iframe id="suggested1" width="40%" height="80" src="https://www.youtube.com/embed/XXc3A4icRZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="suggested2" width="40%" height="80" src="https://www.youtube.com/embed/XXc3A4icRZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Pain report -->
+        <div id="pain-report">
+            <form>
+                <fieldset>
+                    <legend>Daily Pain Report</legend>
+                    <p>Max Daily Pain Level:</p>
+                    <section>
+                            <label>No Pain</label>
+                            <label for="max-pain-0-input">0<br>
+                                <input type="radio" id="max-pain-0-input" name="painChoice" value="0">
+                            </label>
+                            <label for="max-pain-1-input">1<br>
+                                <input type="radio" id="pain-1-input" name="painChoice">
+                            </label>
+                            <label for="max-pain-2-input">2<br>
+                                <input type="radio" id="pain-2-input" name="painChoice">
+                            </label>
+                            <label for="pain-3-input">3<br>
+                                <input type="radio" id="pain-3-input" name="painChoice">
+                            </label>
+                            <label for="pain-4-input">4<br>
+                                <input type="radio" id="pain-4-input" name="painChoice">
+                            </label>
+                            <label for="pain-5-input">5<br>
+                                <input type="radio" id="pain-5-input" name="painChoice">
+                            </label>
+                            <label for="pain-6-input">6<br>
+                                <input type="radio" id="pain-6-input" name="painChoice">
+                            </label>
+                            <label for="pain-7-input">7<br>
+                                <input type="radio" id="pain-7-input" name="painChoice">
+                            </label>
+                            <label for="pain-8-input">8<br>
+                                <input type="radio" id="pain-8-input" name="painChoice">
+                            </label>
+                            <label for="pain-9-input">9<br>
+                                <input type="radio" id="pain-9-input" name="painChoice">
+                            </label>
+                            <label for="pain-10-input">10<br>
+                                <input type="radio" id="pain-10-input" name="painChoice">
+                            </label>
+                            <label>Pain as bad as can be</label>
+                    </section>
+                    <br>
+                    <label for="pain-text-input">Notes:</label>
+                    <input type="text" id="pain-text-input" name="pain-text" maxlength="128">
+                    <br><br>
+                    <input id="pain-report-submit" type="submit" value="Submit">
+                </fieldset>
+
+            </form>
+            <!-- <div>Instructions</div>
+            <input type="text" id="pain-input">
+            <div id="pain-display">painDisplay</div> -->
+        </div>
+        <div>
+            <span id="pain-report-area"></span>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

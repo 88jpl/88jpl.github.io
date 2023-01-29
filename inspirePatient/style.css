@@ -1,0 +1,237 @@
+body div {
+    /* border-style: solid; */
+    font-family: 'SofiaSans', sans-serif;
+}
+/* Title Area */
+#title-area {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+#clinic-logo {
+    background-image: url("ptMockLogo.png");
+    background-size: cover;
+    width: 45px;
+    height: 50px;
+    background-color: blueviolet;
+}
+#clinic-name {
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-left: 10px;
+    flex-wrap: nowrap;
+}
+#account-area {
+    height: 50px;
+    
+    display: flex;
+    justify-content: space-around;
+}
+#patient-picture {
+    background-image: url("profile.jpg");
+    background-size: cover;
+    height: 48px;
+    width: 48px;
+    background-color: aquamarine;
+    border-radius: 8px;
+}
+#patient-name {
+    white-space: nowrap;
+    float: right;
+    margin-right: 10px;
+}
+
+/* Navigation Area */
+#navigation {
+    display: flex;
+    justify-content: space-evenly;
+    border: solid;
+    border-radius: 3px;
+}
+.nav-item {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0px;
+    border: 4px solid;
+}
+.nav-item:hover{
+    background-color: green;
+}
+/* Welcome Area */
+#welcome-area {
+    display: flex;
+}
+#welcome-patient {
+    flex-grow: 1;
+    margin: 10px;
+}
+#welcome-quote-area {
+    flex-grow: 9;
+    padding-left: 5px;
+    padding-top: 8px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 5px;
+}
+#quote-header {
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+#quote-of-the-day {
+    font-style: italic;
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+#quote-of-the-day-dash {
+    float: right;
+    padding-right: 15px;
+}
+/* Data Area */
+#data {
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#data-left {
+    width: 47%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#data-left-small {
+    background-image: url("Daily_Activity.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+}
+
+#streak-header {
+    padding-top: 100%;
+    text-align: center;
+    color: green;
+    font-weight: 600;
+    font-size: large;
+    
+}
+#streak-days {
+    text-align: center;
+    color: green;
+    border: 4px solid green;
+    border-radius: 100%;
+    width: 20px;
+    margin-left: 15%;
+    padding: 10%;
+}
+#streak-footer{
+    text-align: center;
+    color: green;
+}
+#data-right {
+    width: 47%;
+    background-image: url("Range_Data.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+/* Video Area */
+#videos {
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#recent {
+    width: 47%;
+
+}
+#recent-vids {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#suggested {
+    width: 47%;
+}
+#suggested-vids {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+label {
+    float: left;
+    padding: 0 .5em;
+    text-align: center;
+}
+
+#pain-report {
+    height: auto;
+}
+
+section {
+    display: flex;
+    flex: no-wrap;
+    align-items: flex-start;
+    text-align: center;
+}
+
+fieldset {
+    width: auto;
+    
+}
+#pain-text-input{
+    width: 80%;
+}
+#pain-report-submit {
+    float: right;
+}
+.pain-note {
+    border: 2px solid greenyellow;
+    border-radius: 5%;
+    text-align: center;
+    font-size: large;
+}
+
+
+
+
+/* Mobile View */
+
+@media only screen and (max-width: 576px) {
+    section {
+        font-size: xx-small;
+    }
+    section label {
+        margin-left: 0px;
+    }
+    #clinic-name {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #clinic-logo {
+        background-image: none;
+        background-size: cover;
+        width: 0px;
+        height: 0px;
+    }
+    fieldset {
+        width: 375px;
+    }
+}
+@media only screen and (max-width: 705px) and (min-width: 577px) {
+    label {
+        padding: 0 .5em;
+    }
+}
+@media only screen and (min-width: 706px) {
+    label {
+        padding: 0 .9em;
+    }
+    section {
+        font-size: large;
+    }
+}
+
