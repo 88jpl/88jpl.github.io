@@ -70,12 +70,12 @@ painReportSubmitButton.onclick = function () {
     console.log(date);
     // Get time
     var time = new Date().toJSON().slice(11, 16);
-    var doesntExsist = document.getElementById(`${date}`);
+    var doesntExsist = document.getElementById(`${time}`);
     console.log("doesnt exisits test:", doesntExsist);
     if (maxPainValue != "NA" && document.getElementById(`${date}`) == null) {
         var painNote = document.createElement("div");
         painNote.classList.add('pain-note');
-        painNote.setAttribute("id", `${date}`);
+        painNote.setAttribute("id", `${time}`);
         var noteString = "Notes: ";
         if (painText.value == "") {
             noteString = "";
