@@ -1,0 +1,66 @@
+#wrapper {
+    width: 90%;
+    display: inline-block;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#header-area {
+    text-align: center;
+
+    border-radius: 3px;
+}
+#project-area {
+    display: flex;
+    justify-content: space-around;
+}
+.project-cards {
+    width: 40%;
+    align-content: center;
+    border: 3px solid #44107a;
+    padding: 10px;
+    border-radius: 4px;
+}
+.project-card-header {
+    text-align: center;
+    text-decoration: none;
+}
+.project-card-anchor {
+    width: 25%;
+    /* padding-left: 37.5%; */
+    text-decoration: none;
+    font-size: large;
+    color: blue;
+
+}
+.project-card-img {
+    width: 100%;
+
+}
+#header-title
+{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+    display: inline-block;
+    font-size: 42px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
