@@ -1,0 +1,248 @@
+body {
+    display: grid;
+    grid-template-rows: .1fr 240px .5fr 1fr ;
+    background-color: #e3e3d8;
+}
+#input-area {
+    display: grid;
+    grid-template-columns: .25fr 1fr 1fr .25fr 1fr .25fr ;
+    grid-template-areas: ". title input . submit .";
+    align-items: center;
+    border: 3px solid #7cafe6;
+    border-radius: 4px;
+    background-color: #f7e9f3;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 4px;
+}
+#input-area > h3 {
+    grid-area: title;
+
+}
+#input-area > #bp-input-span {
+    grid-area: input;
+    display: grid;
+    grid-template-columns: 5px 1fr 3px 1fr 5px;
+    grid-template-rows: .5fr 1fr .25fr 1fr .25fr 1fr .5fr;
+    grid-template-areas: 
+                    ". . . . ."
+                    ". sys . sysIn ."
+                    ". . . . ."
+                    ". dia . diaIn ."
+                    ". . . . ."
+                    ". pulse . pulseIn ."
+                    ". . . . .";
+
+}
+#bp-input-span > #systolic {
+    grid-area: sys;
+}
+#bp-input-span > #systolic-input{
+    grid-area: sysIn;
+}
+#bp-input-span > #diastolic {
+    grid-area: dia;
+}
+#bp-input-span > #diastolic-input{
+    grid-area: diaIn;
+}
+#bp-input-span > #pulse {
+    grid-area: pulse;
+}
+#bp-input-span > #pulse-input{
+    grid-area: pulseIn;
+}
+
+#input-area > #bp-submit-button {
+    grid-area: submit;
+}
+#bp-submit-button {
+    border: 5px solid #7cafe6;
+    background-color: white;
+    height: 45px;
+    width: max-content;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 50%;
+    font-size: xx-large;
+}
+#bp-submit-button:hover {
+    background-color: #7cafe6;
+    font-size: xx-large;
+    font-weight: 500;
+    cursor: pointer;
+    border: 5px solid black;
+
+}
+#input-title {
+    font-size: xx-large;
+    padding-right: 30px ;
+}
+.bp-input {
+    border: 1px solid #7cafe6;
+    font-size: xx-large;
+    
+
+}
+input {
+    text-align: center;
+    border-radius: 5px;
+    color: #7cafe6;
+    
+}
+input::placeholder {
+    font-size: x-large;
+    opacity: 0.5;
+    color: #7cafe6;
+}
+h3 {
+    text-align: center;
+}
+#data-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.data-container {
+    display: flex;
+    /* justify-content: center; */
+    align-content: stretch;
+    flex-direction: column;
+    border: 3px solid #7cafe6;
+    text-align: center;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    margin: 8px 4px;
+    padding-bottom: 20px;
+
+}
+.data-info-header {
+    font-size: x-large;
+    color:#7cafe6;
+    text-shadow: black 1px 0px 3px;
+}
+.data-info {
+    font-size: 300%;
+    font-weight: 800;
+    text-shadow: #7cafe6 1px 0px 6px;
+
+}
+.bp-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: #f7e9f3;
+    border: 2px solid #7cafe6;
+    width: 75%;
+    justify-content: center;
+    margin: 5px 0px 5px 12.5%;
+    border-radius: 5px;
+}
+.bp-card-date {
+    text-align: center;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bp-card-table {
+
+    border-collapse: collapse;
+}
+tr {
+    border: none;
+    text-align: center;
+
+}
+#bp-table-header {
+    border-bottom: 1px solid black;
+}
+td {
+    border-right: 1px solid #7cafe6; 
+    border-left: 1px solid #7cafe6;
+}
+#bp-output-area {
+    /* border: 3px solid #7cafe6; */
+    border-radius: 3px;
+
+}
+.goal-text {
+    color: royalblue
+}
+.red {
+    background-color: #f5533d;
+}
+.yellow {
+    background-color: #f2cf5a;
+}
+.green {
+    background-color: #4bbf64;
+}
+#login-registration-inputs {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.login-registration-text {
+    color: #808080;
+    font-size: smaller;
+}
+.login-btn {
+    background-color: #7cafe6;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-weight: 600;
+    height: 48.6667px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+}
+#login-prompt {
+    display: flex;
+    justify-content: flex-end;
+}
+#login-prompt>.login-btn {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.login-authorization-text {
+    color: #808080;
+    font-size: smaller;
+}
+#login-authorization-inputs {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    column-gap: 20px;
+}
+#login-area {
+    padding: 5px 15px;
+}
+#login-logout {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+#login-authorization-inputs>h3{
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+#login-registration>h3{
+    margin: 3px;
+}
+.pressure-button {
+    background-color:#7cafe6;
+    border-radius: 3px;
+    border: 1px solid black;
+    color: white;
+}
+.pressure-button:hover {
+    background-color:#a6c7eb;
+    border-radius: 3px;
+    border: 1px solid black;
+    color: black;
+}
+.login-btn:hover {
+    background-color:#a6c7eb;
+    border-radius: 3px;
+    border: 3px solid black;
+    color: black;
+}

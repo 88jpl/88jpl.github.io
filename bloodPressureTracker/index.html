@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Blood Pressure Tracker</title>
+</head>
+<body>
+    <div id="login-area">
+        <div id="login-prompt">
+            <button id="btn-login-signup" class="login-btn">Sign Up</button>
+            <button id="btn-login-login" class="login-btn">Log In</button>
+        </div>
+        <div id="login-registration" style="display:none">
+            <h3>Register</h3>
+            <div id="login-registration-inputs">
+                <p class="login-registration-text">First Name: 
+                    <input id="login-registration-input-f-name" class="login-input" size="15">
+                </p>
+                <p class="login-registration-text">Last Name: 
+                    <input id="login-registration-input-l-name" class="login-input" size="15">
+                </p>
+                <p class="login-registration-text">Email: 
+                    <input id="login-registration-input-email" class="login-input" size="15">
+                </p>
+                <p class="login-registration-text">Password: 
+                    <input id="login-registration-input-password" class="login-input" size="15" type="password">
+                </p>
+                <p class="login-registration-text">Birthday: 
+                    <input id="login-registration-input-birthdate" class="login-input" size="10">
+                </p>
+                <button id="login-registration-btn-registration" class="login-btn">Sign Up!</button>
+                <button id="login-registration-login-btn" class="login-btn">Already have an account?</button>
+            </div>
+        </div>
+        <div id="login-authorization" style="display:none">
+            <div id="login-authorization-inputs">
+                <h3>Login</h3>
+                <p class="login-authorization-text">Email:
+                    <input id="login-authorization-input-email" class="login-input">
+                </p>
+                <p class="login-authorization-text">Password:
+                    <input id="login-authorization-input-password" class="login-input" type="password">
+                </p>
+                <button id="login-authorization-btn-login" class="login-btn">LOG IN</button>
+                <button id="login-authorization-btn-register" class="login-btn">Register</button>
+            </div>
+        </div>
+        <div id="login-logout" style="display:none">
+            <button id="btn-login-logout" class="login-btn">Logout</button>
+        </div>
+    </div>
+    <div id="input-area" style="display:none">
+        <h3 id="input-title">Blood Pressure Tracker</h3>
+        <span id="bp-input-span">
+            <p id="systolic">Systolic: </p><input type="text" class="bp-input" id="systolic-input" maxlength="3" size="3" placeholder="120">
+            <p id="diastolic">Diastolic: </p><input type="text" class="bp-input" id="diastolic-input" maxlength="3" size="3" placeholder="60">
+            <p id="pulse">Pulse:</p> <input type="text" class="bp-input" id="pulse-input" maxlength="3" size="3" placeholder="80">
+        </span>
+        <button id="bp-submit-button">Submit</button>
+    </div>
+    <div id="data-area" style="display:none">
+        <div class="data-container" id="systolic-average-card">
+            <h4 class="data-info-header">Average Systolic:</h4>
+            <div class="data-info" id="overall-average-systolic"></div>
+            <h4 class="data-info-header">Goal:</h4>
+            <div class="data-info goal-text" >< 140</div>
+            
+        </div>
+        <div class="data-container" id="diastolic-average-card">
+            <h4 class="data-info-header">Average Diastolic:</h4>
+            <div class="data-info" id="overall-average-diastolic"></div>
+            <h4 class="data-info-header">Goal:</h4>
+            <div class="data-info goal-text" >< 90</div>
+
+
+        </div>
+        <div class="data-container" id="pulse-average-card">
+            <h4 class="data-info-header">Average Pulse:</h4>
+            <div class="data-info" id="overall-average-pulse"></div>
+            <h4 class="data-info-header">Goal:</h4>
+            <div class="data-info goal-text" >< 70</div>
+        </div>
+    </div>
+    <div id="bp-output-area" style="display:none">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
