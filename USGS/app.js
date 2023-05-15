@@ -2,9 +2,9 @@ var addressSearchButton = document.querySelector("#search-location-btn");
 addressSearchButton.onclick = function () {
     var addressSearchInput = document.querySelector("#search-input");
     var address = encodeURIComponent(addressSearchInput.value);
-    fetch(`https://jpl.hopto.me:53011/locations/${address}`, {
+    fetch(`http://jpl.hopto.me:53011/locations/${address}`, {
         method: "GET",
-        // credentials: "include",
+        credentials: "include",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded; utf-8"
         }
