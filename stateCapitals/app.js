@@ -115,6 +115,7 @@ var app = new Vue({
         passing: false,
         questionIndex: -1,
         incorrect: false
+        
     },
     methods: {
         displayNextQuestion: function () {
@@ -123,14 +124,19 @@ var app = new Vue({
             this.questionIndex = nextIndex;
             let nextResponse = this.questionBank[nextIndex];
             this.question = nextResponse[0];
+            let btnCollection = document.getElementsByClassName("answer-button");
+            for (i = 0; i < 8; i++) {
+                btnCollection[i].classList.remove("incorrect");
+            }
             this.loadOptions();
+
 
         },
         checkAnswer: function (index) {
             let value = this.options[index];
             if (value == this.questionBank[this.questionIndex][1]) {
                 this.incorrect = false;
-                console.log("Correct");
+                // console.log("Correct");
                 this.displayNextQuestion();
                 this.streak += 1;
                 if (this.streak > this.highStreak) {
@@ -138,7 +144,9 @@ var app = new Vue({
                 }
                 return true;
             } else {
-                console.log("Incorrect");
+                // console.log("Incorrect");
+                incorrectAnswerButton = document.querySelector(`#answer-button-${index}`)
+                incorrectAnswerButton.classList.add("incorrect");
                 this.incorrect = true;
                 this.streak = 0;
                 return false;
@@ -147,23 +155,29 @@ var app = new Vue({
         loadOptions: function () {
             this.options = [-1,-1,-1,-1,-1,-1,-1,-1];
             let answerSpot = Math.floor(Math.random() * 8);
-            console.log(this.questionBank[this.questionIndex][1]);
+            // console.log(this.questionBank[this.questionIndex][1]);
             this.options[answerSpot] = this.questionBank[this.questionIndex][1];
             for (i = 0; i < 8; i++) {
                 if (this.options[i] == -1) {
                     this.options[i] = this.randomAnswer();
                 }
             }
-            console.log(this.options);
+            // console.log(this.options);
             for (i = 0; i < 8; i++) {
                 if (this.options[i] > 0 && this.options[i] < 5) {
                     this.options[i] = this.answerPool[this.questionIndex][this.options[i]];
                 } else if (this.options[i] < 9) {
                     let extraAnswerStateIndex = Math.floor(Math.random() * 50);
+                    if (extraAnswerStateIndex == this.questionIndex) {
+                        extraAnswerStateIndex = Math.floor(Math.random() * 50);
+                        if (extraAnswerStateIndex == this.questionIndex) {
+                            extraAnswerStateIndex = Math.floor(Math.random() * 50);
+                        }
+                    }
                     this.options[i] = this.answerPool[extraAnswerStateIndex][this.options[i] - 4];
                 }
             }
-            console.log(this.options);
+            // console.log(this.options);
 
         },  
         randomAnswer: function () {
@@ -172,7 +186,7 @@ var app = new Vue({
                 randomNumber == this.options[4] || randomNumber == this.options[5] || randomNumber == this.options[6] || randomNumber == this.options[7]) {
                 return this.randomAnswer();
             } else {
-                console.log(randomNumber);
+                // console.log(randomNumber);
                 return randomNumber;
             }
         }

@@ -70,3 +70,17 @@ body #app #question-area {
     text-align: center;
     background-color: grey;
 }
+.incorrect {
+    background-color: #e27a7a !important;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 900px) { 
+    body #app #answer-area .answer-button{
+
+        height: 20%;
+        width: 40%;
+    }
+    #app {
+        height: 100%;
+    }
+} 
