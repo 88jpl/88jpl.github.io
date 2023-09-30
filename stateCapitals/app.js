@@ -129,8 +129,6 @@ var app = new Vue({
                 btnCollection[i].classList.remove("incorrect");
             }
             this.loadOptions();
-
-
         },
         checkAnswer: function (index) {
             let value = this.options[index];
@@ -178,7 +176,6 @@ var app = new Vue({
                 }
             }
             // console.log(this.options);
-
         },  
         randomAnswer: function () {
             let randomNumber = Math.floor((Math.random() * 8) + 1);

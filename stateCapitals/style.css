@@ -1,7 +1,6 @@
 [v-cloak] {
 	display: none;
 }
-
 body {
     background-color: #75b2ef;
 }
@@ -76,9 +75,9 @@ body #app #question-area {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 900px) { 
     body #app #answer-area .answer-button{
-
         height: 20%;
         width: 40%;
+        font-size: 18px;
     }
     #app {
         height: 100%;
