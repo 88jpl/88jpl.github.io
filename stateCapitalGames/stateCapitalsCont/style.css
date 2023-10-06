@@ -18,6 +18,7 @@ body #app #answer-area {
 .answer-box {
     width: 100%;
     display: flex;
+    justify-content: space-around;
 }
 body #app #answer-area .answer-button{
     width: 30%;

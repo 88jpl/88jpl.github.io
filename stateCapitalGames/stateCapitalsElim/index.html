@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Capitals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div id="question-area">
+            {{ prompt }} 
+            {{ question }}?
+            <br>
+            <p>Remaining: {{ remaining }}</p>
+            
+        </div>
+        <div id="answer-area">
+            <div class="answer-box">
+                <button id="answer-button-0" class="answer-button" v-on:click="checkAnswer(0)"> {{ options[0]}}</button>
+                <button id="answer-button-1" class="answer-button" v-on:click="checkAnswer(1)"> {{ options[1]}}</button>
+            </div>
+            <div class="answer-box">
+                <button id="answer-button-2" class="answer-button" v-on:click="checkAnswer(2)"> {{ options[2]}}</button>
+                <button id="answer-button-3" class="answer-button" v-on:click="checkAnswer(3)"> {{ options[3]}}</button>
+            </div>
+            <div class="answer-box">
+                <button id="answer-button-4"class="answer-button" v-on:click="checkAnswer(4)"> {{ options[4]}}</button>
+                <button id="answer-button-5"class="answer-button" v-on:click="checkAnswer(5)"> {{ options[5]}}</button>
+            </div>
+            <div class="answer-box">
+                <button id="answer-button-6" class="answer-button" v-on:click="checkAnswer(6)"> {{ options[6]}}</button>
+                <button id="answer-button-7" class="answer-button" v-on:click="checkAnswer(7)"> {{ options[7]}}</button>
+            </div>
+            <div id="message-area" v-show="incorrect">
+                <div  id="message">{{ message }}</div>
+            </div>
+        </div> 
+        <div>
+            <div id="streak">
+                Current Streak: {{ streak }} <br>
+                Highest Streak: {{ highStreak }}
+            </div>
+        </div>       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
